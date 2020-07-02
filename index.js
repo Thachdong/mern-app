@@ -31,6 +31,9 @@ app.use(express.static(path.join(__dirname, "client/build")));
 app.use("/api/user", userRoutes);
 app.use("/api/product", productRoutes);
 app.use("/api/order", orderRoutes);
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname + "/client/build/index.html"));
+// });
 
 //Catch 404 error
 app.use((req, res, next) => {
